@@ -2,11 +2,11 @@
 
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
-include 'config.php';
 
 $data = json_decode(file_get_contents("php://input"), true);
 $student_id = $data['sid'];
 
+include 'config.php';
 
 $sql = "SELECT * FROM students where id={$student_id}";
 
