@@ -3,10 +3,10 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-$data = json_decode(file_get_contents("php://input"), true);
-$searched_value = $data['search'];
+// $data = json_decode(file_get_contents("php://input"), true);
+// $searched_value = $data['search'];
 
-// $searched_value = isset($_GET['search']) ? $_GET['search'] : die(); // use for get request
+$searched_value = isset($_GET['search']) ? $_GET['search'] : die(); // use for get request
 
 include 'config.php';
 
